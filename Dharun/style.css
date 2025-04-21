@@ -1,0 +1,216 @@
+:root {
+    --bg: #121212;
+    --text: #f1f1f1;
+    --accent: #00aaff;
+    --card: #1e1e1e;
+}
+  
+
+  /* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--accent);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--text);
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--bg);
+  }
+  
+  header p {
+    font-size: 1rem;
+    margin: 0.3rem 0 0;
+    color: var(--card);
+  }  
+  /* Navigation */
+  nav {
+    background-color: var(--text);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem;
+    margin: 0;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: var(--card);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+    color: var(--accent);
+  }
+
+  /* Sticky Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Sections */
+  section {
+    padding: 2rem 0;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  
+  /* Skills & Interests */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  .skills-list li {
+    background: var(--card);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-weight: 500;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .skills-list li:hover {
+    transform: scale(1.05);
+    background: var(--accent);
+    color: white;
+  }
+  
+  /* Resume button */
+  .resume-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .resume-btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+  
+  /* Projects */
+  .project-card {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card h3 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+  
+  /* Contact Links */
+  section#contact a {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  section#contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 0;
+    background-color: var(--card);
+    color: var(--accent);
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+  }
+
+  /* Scroll Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      gap: 1rem;
+    }
+  
+    .skills-list {
+      justify-content: center;
+    }
+  }
+  
